@@ -34,7 +34,14 @@ const App = () => {
         {user ? (
           <>
             {/* Protected routes (available only to signed-in users) */}
-            <Route path='/hoots' element={<HootList hoots={hoots} />} />
+            <Route 
+              path='/hoots' 
+              element={<HootList hoots={hoots} />} 
+            />
+            <Route
+              path='/hoots/:hootId'
+              element={<HootDetails />}
+            />
           </>
         ) : (
           <>
